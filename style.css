@@ -1,0 +1,191 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e1f5fe;  /* Latar belakang lebih cerah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 600px;  /* Lebar diperluas */
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.class-name,
+.npm-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;  /* Warna teks lebih gelap */
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: #b2ebf2;  /* Warna latar belakang lebih cerah */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.class-name:hover,
+.npm-number:hover {
+  background-color: #80deea;  /* Efek hover lebih cerah */
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 26px;
+  color: #00796b;  /* Warna judul lebih gelap */
+  margin-bottom: 20px;
+}
+
+.input-group,
+.select-group {
+  margin: 15px 0;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0f7fa;  /* Latar belakang input lebih cerah */
+  outline: none;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:hover,
+select:hover {
+  background-color: #b2ebf2;  /* Warna hover lebih cerah */
+  transform: scale(1.02);
+}
+
+.results {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.result-card {
+  background-color: #b2ebf2;  /* Warna latar belakang kartu hasil lebih cerah */
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1;  /* Mengatur agar setiap kartu memiliki ukuran yang sama */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.result-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.result-card h3 {
+  font-size: 14px;
+  color: #00796b;  /* Warna teks header kartu lebih gelap */
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  font-size: 16px;
+  color: #d32f2f;  /* Warna hasil konversi merah */
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  background-color: #00796b;  /* Warna tombol lebih gelap */
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #004d40;  /* Warna hover lebih gelap */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.history h3 {
+  font-size: 16px;
+  color: #00796b;  /* Warna header riwayat lebih gelap */
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.history li {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.history li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.history li:nth-child(odd) {
+  background-color: #e0f7fa;  /* Warna latar belakang item riwayat lebih cerah */
+}

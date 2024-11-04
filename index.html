@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Konversi Suhu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="class-name">Nama : Andika Tresna Hariadi Akbar</span>
+            <span class="npm-number">NPM : 22010112</span>
+        </div>
+        <h1>Konversi Suhu</h1>
+        <div class="input-group">
+            <label for="temperature">Masukkan Suhu</label>
+            <input type="number" id="temperature" placeholder="Suhu">
+        </div>
+        <div class="select-group">
+            <label for="unit">Pilih Satuan</label>
+            <select id="unit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+        </div>
+        <div class="results">
+            <div class="result-card">
+                <h3>Celsius</h3>
+                <p id="celsius-output">-</p>
+            </div>
+            <div class="result-card">
+                <h3>Fahrenheit</h3>
+                <p id="fahrenheit-output">-</p>
+            </div>
+            <div class="result-card">
+                <h3>Kelvin</h3>
+                <p id="kelvin-output">-</p>
+            </div>
+        </div>
+        <button id="save-button">Simpan Hasil</button>
+        <div class="history">
+            <h3>Riwayat Konversi</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
